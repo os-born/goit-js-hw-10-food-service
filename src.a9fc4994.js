@@ -11,10 +11,10 @@ module.exports=[{id:"XWaQXcbk0",name:"Картофель, запеченный �
 },{}],"Fgry":[function(require,module,exports) {
 "use strict";var e=s(require("../templates/menu.hbs")),r=require("./refs"),u=s(require("../menu.json"));function s(e){return e&&e.__esModule?e:{default:e}}r.refs.menuList.innerHTML=(0,e.default)(u.default),console.log(r.refs.menuList);
 },{"../templates/menu.hbs":"dgbP","./refs":"VyiV","../menu.json":"mA8c"}],"qgSZ":[function(require,module,exports) {
-"use strict";var e=require("./refs");const t={LIGHT:"light-theme",DARK:"dark-theme"},r=localStorage.getItem("theme");console.log(r),r&&e.refs.body.classList.replace("light-theme",r);const s=r=>{r.preventDefault(),e.refs.themeSwitcher.checked?(e.refs.body.classList.replace("light-theme","dark-theme"),localStorage.setItem("theme",JSON.stringify(t.DARK))):(e.refs.body.classList.replace("dark-theme","light-theme"),localStorage.setItem("theme",JSON.stringify(t.LIGHT)))};e.refs.themeSwitcher.addEventListener("change",s);
+"use strict";var e=require("./refs");const t={LIGHT:"light-theme",DARK:"dark-theme"},r=localStorage.getItem("theme");console.log(r);const s=r=>{r.preventDefault(),e.refs.themeSwitcher.checked?(e.refs.body.classList.replace("light-theme","dark-theme"),localStorage.setItem("theme",JSON.stringify(t.DARK))):(e.refs.body.classList.replace("dark-theme","light-theme"),localStorage.setItem("theme",JSON.stringify(t.LIGHT)))};e.refs.themeSwitcher.addEventListener("change",s);
 },{"./refs":"VyiV"}],"clu1":[function(require,module,exports) {
 
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./js/menuList");var e=require("./js/refs");require("./js/themeSwitcher"),require("./sass/main.scss");const s=e.refs.body.classList.add("light-theme");savedData,"dark-theme"===savedData&&(e.refs.themeSwitcher.checked,e.refs.body.classList.replace("light-theme","dark-theme"));
+"use strict";require("./js/menuList");var e=require("./js/refs");require("./js/themeSwitcher"),require("./sass/main.scss");const s=localStorage.getItem("theme");console.log(s),s&&e.refs.body.classList.replace("light-theme",s);const t=e.refs.body.classList.add("light-theme");"dark-theme"===s&&(e.refs.themeSwitcher.checked,e.refs.body.classList.replace("light-theme","dark-theme"));
 },{"./js/menuList":"Fgry","./js/refs":"VyiV","./js/themeSwitcher":"qgSZ","./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10-food-service/src.73ba24ec.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.a9fc4994.js.map
