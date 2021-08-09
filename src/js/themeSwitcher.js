@@ -5,13 +5,7 @@ const Theme = {
     DARK: 'dark-theme',
   };
 
-const savedData = localStorage.getItem('theme')
-console.log(savedData);
-  
-// if(savedData){refs.body.classList.replace('light-theme', savedData)}
-
-const onHandleChange = e => {
-    e.preventDefault();
+const onHandleChange = () => {
 
     if(refs.themeSwitcher.checked){
         refs.body.classList.replace('light-theme', 'dark-theme');
@@ -23,5 +17,13 @@ const onHandleChange = e => {
     };
 };
 
+export function checkedTheme() {
+    const savedData = localStorage.getItem('theme');
+    if (savedData === JSON.stringify(Theme.DARK)){
+        refs.themeSwitcher.checked = true;
+        onHandleChange();
+        localStorage.removeItem(savedData);
+    };
+}
 
 refs.themeSwitcher.addEventListener('change', onHandleChange)
