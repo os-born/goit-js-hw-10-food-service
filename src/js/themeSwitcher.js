@@ -8,7 +8,7 @@ const Theme = {
 const savedData = localStorage.getItem('theme')
 console.log(savedData);
   
-if(savedData){refs.body.classList.replace('light-theme', savedData)}
+// if(savedData){refs.body.classList.replace('light-theme', savedData)}
 
 const onHandleChange = e => {
     e.preventDefault();
